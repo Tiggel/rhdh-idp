@@ -24,4 +24,3 @@ spec:
     passwordSecret:
       name: keycloak-db-secret
       key: password
-...
