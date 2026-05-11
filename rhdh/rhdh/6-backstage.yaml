@@ -23,5 +23,5 @@ spec:
     replicas: 1
     route:
       enabled: true
-      host: rhdh.apps.cluster-d4fqj.dynamic.redhatworkshops.io
-      subdomain: apps.cluster-d4fqj.dynamic.redhatworkshops.io
+      host: rhdh.apps.cluster-fpqfl.dynamic.redhatworkshops.io
+      subdomain: apps.cluster-fpqfl.dynamic.redhatworkshops.io
