@@ -23,5 +23,5 @@ spec:
     replicas: 1
     route:
       enabled: true
-      host: rhdh.apps.cluster-4xhb2.dynamic.redhatworkshops.io
-      subdomain: apps.cluster-4xhb2.dynamic.redhatworkshops.io
+      host: rhdh.apps.cluster-r8jrg.dynamic.redhatworkshops.io
+      subdomain: apps.cluster-r8jrg.dynamic.redhatworkshops.io

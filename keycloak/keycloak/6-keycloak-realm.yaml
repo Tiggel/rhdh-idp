@@ -35,10 +35,10 @@ spec:
         protocol: openid-connect
         publicClient: false
         redirectUris:
-          - "https://rhdh.apps.cluster-4xhb2.dynamic.redhatworkshops.io/api/auth/*"
-        rootUrl: "https://rhdh.apps.cluster-4xhb2.dynamic.redhatworkshops.io"
-        adminUrl: "https://rhdh.apps.cluster-4xhb2.dynamic.redhatworkshops.io"
-        baseUrl: "https://rhdh.apps.cluster-4xhb2.dynamic.redhatworkshops.io"
+          - "https://rhdh.apps.cluster-r8jrg.dynamic.redhatworkshops.io/api/auth/*"
+        rootUrl: "https://rhdh.apps.cluster-r8jrg.dynamic.redhatworkshops.io"
+        adminUrl: "https://rhdh.apps.cluster-r8jrg.dynamic.redhatworkshops.io"
+        baseUrl: "https://rhdh.apps.cluster-r8jrg.dynamic.redhatworkshops.io"
         webOrigins:
           - "+"
         secret: "developer-hub-secret"
