@@ -19,9 +19,14 @@ spec:
         - name: NODE_TLS_REJECT_UNAUTHORIZED
           value: "0"
       secrets:
-        - name: rhdh-secrets            
+        - name: rhdh-secrets
+        - name: rhdh-gitlab-secret
+    extraFiles:
+      configMaps:
+        - name: java-service-template
+      mountPath: /opt/app-root/src/templates
     replicas: 1
     route:
       enabled: true
-      host: rhdh.apps.cluster-r8jrg.dynamic.redhatworkshops.io
-      subdomain: apps.cluster-r8jrg.dynamic.redhatworkshops.io
+      host: rhdh.apps.cluster-4248n.dynamic.redhatworkshops.io
+      subdomain: apps.cluster-4248n.dynamic.redhatworkshops.io

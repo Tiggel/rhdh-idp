@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ${{ values.name }}
+  description: ${{ values.description }}
+  annotations:
+    gitlab.com/project-slug: ${{ values.gitlabGroup }}/${{ values.name }}
+  links:
+    - url: https://${{ values.gitlabHost }}/${{ values.gitlabGroup }}/${{ values.name }}
+      title: GitLab Repository
+      icon: gitlab
+spec:
+  type: service
+  lifecycle: experimental
+  owner: ${{ values.owner }}

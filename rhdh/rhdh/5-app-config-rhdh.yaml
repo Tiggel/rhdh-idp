@@ -8,17 +8,25 @@ data:
   app-config.yaml: |
     app:
       title: Red Hat Developer Hub
-      baseUrl: https://rhdh.apps.cluster-r8jrg.dynamic.redhatworkshops.io
+      baseUrl: https://rhdh.apps.cluster-4248n.dynamic.redhatworkshops.io
+    integrations:
+      github:
+        - host: github.com
+      gitlab:
+        - host: gitlab.consol.de
+          token: ${GITLAB_TOKEN}
     backend:
       auth:
         keys:
           - secret: ${BACKEND_SECRET}
-      baseUrl: https://rhdh.apps.cluster-r8jrg.dynamic.redhatworkshops.io
+      baseUrl: https://rhdh.apps.cluster-4248n.dynamic.redhatworkshops.io
       cors:
-        origin: https://rhdh.apps.cluster-r8jrg.dynamic.redhatworkshops.io
+        origin: https://rhdh.apps.cluster-4248n.dynamic.redhatworkshops.io
       reading:
         allow:
           - host: raw.githubusercontent.com
+          - host: github.com
+          - host: gitlab.consol.de
     auth:
       environment: production
       session:
@@ -26,10 +34,10 @@ data:
       providers:
         oidc:
           production:
-            metadataUrl: "https://keycloak-rhdh-operator.apps.cluster-r8jrg.dynamic.redhatworkshops.io/realms/rhdh"
+            metadataUrl: "https://keycloak-rhdh-operator.apps.cluster-4248n.dynamic.redhatworkshops.io/realms/rhdh"
             clientId: rhdh
             clientSecret: developer-hub-secret
-            callbackUrl: https://rhdh.apps.cluster-r8jrg.dynamic.redhatworkshops.io/api/auth/oidc/handler/frame
+            callbackUrl: https://rhdh.apps.cluster-4248n.dynamic.redhatworkshops.io/api/auth/oidc/handler/frame
             prompt: login
             signIn:
               resolvers:
@@ -38,10 +46,15 @@ data:
       dangerouslyAllowSignInWithoutUserInCatalog: true
     signInPage: oidc
     catalog:
+      locations:
+        - type: file
+          target: /opt/app-root/src/templates/template.yaml
+          rules:
+            - allow: [Template]
       providers:
         keycloakOrg:
           default:
-            baseUrl: "https://keycloak-rhdh-operator.apps.cluster-r8jrg.dynamic.redhatworkshops.io"
+            baseUrl: "https://keycloak-rhdh-operator.apps.cluster-4248n.dynamic.redhatworkshops.io"
             loginRealm: "rhdh"
             realm: "rhdh"
             clientId: rhdh
