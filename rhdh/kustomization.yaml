@@ -9,3 +9,4 @@ resources:
   - rhdh/5-app-config-rhdh.yaml
   - rhdh/6-backstage.yaml
   - rhdh/8-java-template-cm.yaml
+  - rhdh/9-dynamic-plugins.yaml
