@@ -90,9 +90,6 @@ data:
           name: Publish to GitLab
           action: publish:gitlab
           input:
-            allowedHosts:
-              - gitlab.consol.de
-            description: ${{ parameters.description }}
             repoUrl: gitlab.consol.de?owner=${{ parameters.gitlabGroup }}&repo=${{ parameters.name }}
             defaultBranch: main
             repoVisibility: internal
